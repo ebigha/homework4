@@ -46,14 +46,12 @@ nav a:hover{
   -webkit-transition: top 1s ease-out;
   transition: top 1s ease-out;
   z-index: 1;
-  position: relative;
+  position: absolute;
   top: -40px;
-
-  /*visibility:hidden;*/
 }
 
 .skip a:focus{
-  position: relative;
+  position: absolute;
   top: 0px;
   margin: auto;
 }

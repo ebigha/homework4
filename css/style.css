@@ -33,7 +33,7 @@ nav a{
   text-decoration: none; 
 }
 
-nav:hover, nav:focus {
+nav a:hover{
   text-decoration: underline;
 }
 
@@ -47,20 +47,22 @@ nav:hover, nav:focus {
   transition: top 1s ease-out;
   z-index: 1;
   position: relative;
-  top: 40px;
+  top: -40px;
 
   /*visibility:hidden;*/
 }
 
-.skip:focus{
-
+.skip a:focus{
+  position: absolute;
+  top: 0px;
+  margin: auto;
 }
   
   /*Your Code Here*/
 /*Write selector/rule property to position the skip class element*/
 
-*:focus{
-  border: 2px;
+*:focus {
+  border: 2px solid black;
 }
 /*Write selector/rule property to style all elements when in focus*/
 
@@ -76,6 +78,8 @@ footer{
   color: white;
   padding-top: 30px;
   text-align: center;
+  /*grid-column: 1 / -1; */
+
 }
 
 
@@ -84,7 +88,7 @@ footer{
 .container{
   display: grid;
   grid-template-columns: 1fr 5fr 1fr;
-  grid-template-rows: 5; /* I don't need this  line*/
+  grid-template-rows: auto auto auto auto auto; /* I don't need this  line*/
   margin: auto;
   grid-row-gap: 15px;
 }
@@ -118,6 +122,7 @@ header p{
 .about-image, .method-image, .clients-image, .contact-image{
   grid-column: 1 / -1;
   max-height: 700px;
+  overflow: hidden;
 }
 
 .about, .about-image{
@@ -146,18 +151,17 @@ header p{
 background-color: rgba(255, 255, 255, .8);
   border: 10px solid black;
   padding: 30px;
-  vertical-align: center;
-  text-align: center;
+  margin: 0, auto;
 
   /*Your code here:*/
 
 }
 
 
-/*@media all and (min-width: 800px){
+@media all and (min-width: 800px){
   nav{
     padding: 30px 0px;
-    align: right;
+    text-align: right;
     vertical-align: center;
   }
 
